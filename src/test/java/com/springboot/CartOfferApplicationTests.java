@@ -23,12 +23,13 @@ import java.util.List;
 public class CartOfferApplicationTests {
 
 
-	@Test
+	@Test()
 	public void checkFlatXForOneSegment() throws Exception {
 		List<String> segments = new ArrayList<>();
 		segments.add("p1");
 		OfferRequest offerRequest = new OfferRequest(1,"FLATX",10,segments);
 		boolean result = addOffer(offerRequest);
+		System.out.println("Running 1st test");
 		Assert.assertEquals(result,true); // able to add offer
 	}
 
